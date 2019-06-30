@@ -7,6 +7,7 @@ const lang = {
     education: 'Education',
     skills: 'Skills',
     projects: 'Projects',
+    extracurricular: 'Extracurricular',
     contributions: 'Contributions',
     about: 'About me'
 };
