@@ -78,7 +78,9 @@
           >
             <i v-if="skill.iconClass" :class="'lang-icon ' + skill.iconClass"></i>
 
-            <span v-else class="squarred-grid-item"><span class="skill-name">{{ skill.name }}</span></span>
+            <span v-else class="squarred-grid-item">
+              <span class="skill-name">{{ skill.name }}</span>
+            </span>
           </a>
         </div>
       </div>
@@ -105,7 +107,9 @@
             <span class="section-content__header">{{ experience.position }}</span>
             <span class="section-content__subheader">{{ experience.company }}</span>
             <div class="section-content__text--light">{{ experience.timeperiod }}</div>
-            <span class="section-content__text"><vue-markdown>{{ experience.description }}</vue-markdown></span>
+            <span class="section-content__text">
+              <vue-markdown>{{ experience.description }}</vue-markdown>
+            </span>
           </a>
         </div>
       </div>
@@ -138,15 +142,18 @@
         </div>
 
         <div class="section-content">
-          <div
+          <a
             v-for="(extracurricular, index) in person.extracurricular"
             :key="index"
             class="section-content__item"
+            :href="extracurricular.url"
           >
             <span class="section-content__header">{{ extracurricular.name }}</span>
             <span class="section-content__subheader">{{ extracurricular.organisation }}</span>
-            <span class="section-content__text"><vue-markdown>{{ extracurricular.description }}</vue-markdown></span>
-          </div>
+            <span class="section-content__text">
+              <vue-markdown>{{ extracurricular.description }}</vue-markdown>
+            </span>
+          </a>
         </div>
       </div>
 
@@ -177,13 +184,13 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import VueMarkdown from 'vue-markdown';
-import { getVueOptions } from './options';
+import Vue from "vue";
+import VueMarkdown from "vue-markdown";
+import { getVueOptions } from "./options";
 
-Vue.component('vue-markdown', VueMarkdown);
+Vue.component("vue-markdown", VueMarkdown);
 
-const name = 'creative';
+const name = "creative";
 
 export default Vue.component(name, getVueOptions(name));
 </script>
