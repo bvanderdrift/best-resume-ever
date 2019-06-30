@@ -1,0 +1,23 @@
+version: 2.0
+jobs:
+  export-upload-resume:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:9.9
+    steps:
+      - checkout
+      - run:
+          name: Export PDFs
+          command: npm run export; cd pdfs; cp creative.pdf resume_beer.pdf;
+      - run:
+          name: Upload PDF
+          command: aws s3 cp resume_beer.pdf s3://itsbeer --acl public-read;
+workflows:
+  version: 2
+  export-upload-workflow:
+    jobs:
+      - approve-export-upload-resume:
+          type: approval
+      - export-upload-resume:
+          requires:
+            - approve-export-upload-resume
