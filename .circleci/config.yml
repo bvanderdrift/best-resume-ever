@@ -6,6 +6,16 @@ jobs:
       - image: circleci/node:9.9
     steps:
       - checkout
+
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install Missing NPM Packages
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
       - run:
           name: Export PDFs
           command: npm run export; cd pdfs; cp creative.pdf resume_beer.pdf;
