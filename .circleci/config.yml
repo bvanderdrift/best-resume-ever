@@ -17,6 +17,9 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: Install AWS CLI Tools
+          command: apt install awscli -y
+      - run:
           name: Export PDFs
           command: npm run export; cd pdf; cp creative.pdf resume_beer.pdf;
       - run:
