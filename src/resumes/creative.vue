@@ -196,7 +196,7 @@ export default Vue.component(name, getVueOptions(name));
 </script>
 
 <style lang="less" scoped>
-@accent-color: #009d3f;
+@accent-color: #abcdef;
 
 .resume {
   display: flex;
