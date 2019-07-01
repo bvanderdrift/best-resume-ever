@@ -18,7 +18,7 @@ jobs:
             - node_modules
       - run:
           name: Export PDFs
-          command: npm run export; cd pdfs; cp creative.pdf resume_beer.pdf;
+          command: npm run export; cd pdf; cp creative.pdf resume_beer.pdf;
       - run:
           name: Upload PDF
           command: aws s3 cp resume_beer.pdf s3://itsbeer --acl public-read;
