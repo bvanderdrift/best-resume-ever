@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
 jobs:
   export-upload-resume:
     working_directory: ~/repo
@@ -17,20 +19,17 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Install AWS CLI Tools
-          command: sudo apt install awscli -y
-      - run:
           name: Export PDFs
           command: npm run export; cd pdf; cp creative.pdf resume_beer.pdf;
-      - run:
-          name: Upload PDF
-          command: aws s3 cp resume_beer.pdf s3://itsbeer --acl public-read;
+      - aws-s3/copy:
+          from: pdf/resume_beer.pdf
+          to: "s3://itsbeer"
+          arguments: |
+            --acl public-read
 workflows:
   version: 2
   export-upload-workflow:
     jobs:
       - approve-export-upload-resume:
           type: approval
-      - export-upload-resume:
-          requires:
-            - approve-export-upload-resume
+      - export-upload-resume
