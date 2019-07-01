@@ -14,15 +14,17 @@ experience:
 
   * Managed Library Product; Feature Effort/Reward Plot, Roadmap. Brought from initial thought to released MVP.
 
-  * Engineering data structures to capture contractual legal meaning as data.
+  * Tracking Quality of user journeys of frontend product.
 
-  * Product Owner for the user-facing product.
+  * Product Owner for the frontend product.
 
   * Managed one remote developer.
 
   * Responsible for performing technical interviews and sourcing candidates.
 
-  * Set up full CI/CD and Deployment workflow
+  * Engineering data structures to capture contractual legal meaning as data.
+
+  * Set up full CI/CD and Deployment workflows
   "
   website: https://legalos.io
 
