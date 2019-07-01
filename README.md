@@ -9,33 +9,11 @@
 
 <div align="center">
 
-[![Travis badge](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)](https://travis-ci.org/salomonelli/best-resume-ever)
+Latest release of the resume to be found at [https://itsbeer.s3.eu-central-1.amazonaws.com/resume_beer.pdf](https://itsbeer.s3.eu-central-1.amazonaws.com/resume_beer.pdf).
+
+Releases are done through [CircleCI](https://circleci.com/gh/bvanderdrift/best-resume-ever).
 
 </div>
-
-<h4 align="center">
-  :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
-  <br><br>
-  Made with Vue and LESS.
-</h4>
-
-<br>
-<br>
-
-<p align="left">
-<img src="src/assets/preview/resume-creative.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-purple.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-side-bar-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-left-right-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-material-dark.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-left-right.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-oblique.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-cool.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-
-<br>
-<br>
 
 ## Prerequisite
 
@@ -49,42 +27,28 @@ best-resume-ever requires at least node v.8.5.0.
 
 1. Clone this repository.
 ```
-git clone https://github.com/salomonelli/best-resume-ever
+git clone https://github.com/bvanderdrift/best-resume-ever
 ```
 
 2. Go to the cloned directory (e.g. `cd best-resume-ever`).
 
 3. Run `npm install`.
 
-4. Customize your resume in the `resume/` directory: edit your data `data.yml` and replace your profile-picture `id.jpg`.
+4. Preview resumes with `npm run dev`.
 
-5. Preview resumes with `npm run dev`.
-
-6. Export with `npm run export`.
+5. Export with `npm run export`.
 
 
 All resumes will be exported to the `pdf/` folder.
 
-<br>
-
-
-## Creating and Updating Templates
-
-Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or update templates.
-
-<br>
-
-
-## Contribute
-
-Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you make any kind of changes to an existing template, please commit them as new templates.
-
-<br>
+Currently only the "creative" template is optimized for the resume contents of this fork.
 
 
 ## Credits
 
-This project uses several open source packages:
+This resume framework is forked from [https://github.com/salomonelli/best-resume-ever](https://github.com/salomonelli/best-resume-ever).
+
+Which in turn uses several open source packages:
 
 * <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
 * <a href="https://github.com/GoogleChrome/puppeteer" target="_blank">Puppeteer</a>
@@ -94,6 +58,7 @@ This project uses several open source packages:
 
 
 ---
+## Creator
 
 > [sarasteiert.com](https://www.sarasteiert.com) &nbsp;&middot;&nbsp;
 > GitHub [@salomonelli](https://github.com/salomonelli) &nbsp;&middot;&nbsp;
