@@ -3,20 +3,21 @@ name:
   first: Beer
   middle: van der
   last: Drift
-about: Technical, Curious, Dutch. Software Engineer looking to get into Product Management.
+title: Product Person.
+about: Technical, Curious, Dutch.
 
 experience:
 - company: Legal OS
   location: Berlin, Germany
   position: Lead Developer
   timeperiod: November 2017 - August 2019
-  description: "Brought Legal OS from zero code to a €2 million seed round.
+  description: "Brought tech at Legal OS from zero code until a full Product. Legal OS closed a €2 million seed round.
 
-  * Managed Library Product; Feature Effort/Reward Plot, Roadmap. Brought from initial thought to released MVP.
+  * Managed Library Product; Feature Effort/Reward Plot, Roadmap. Brought from initial concept to released MVP.
 
-  * Tracking Quality of user journeys of frontend product.
+  * Tracking Quality of user journeys of Management Product.
 
-  * Product Owner for the frontend product.
+  * Product Owner for the Management Product.
 
   * Managed one remote developer.
 
@@ -44,25 +45,22 @@ education:
 - degree: Bachelor of Computer Science
   timeperiod: March 2012 - August 2015
   description: Major in Computer Science, Minor in Law, Economics & Computer Science. Delft Univerisity of Technology, The Netherlands. GPA 7.4/10.
+  website: https://www.tudelft.nl/en/
 
 # skill level goes 0 to 100
 skills:
-- name: JavaScript/TypeScript
-  level: 95
-- name: Node.js
-  level: 90
-- name: React.js
-  level: 93
-- name: C#
-  level: 70
-- name: Java
+- name: Prototyping
+  level: 80
+- name: Agile
   level: 60
-- name: REST
-  level: 70
-- name: Clojure
-  level: 40
-- name: Docker
-  level: 40
+- name: Figma
+  level: 75
+- name: Balsamiq
+  level: 60
+- name: Coding
+  level: 95
+- name: Product Ownership
+  level: 60
 knowledge: Fluent in English & Dutch, B2 in German, A2 in French.
 
 volunteering:
@@ -95,7 +93,7 @@ extracurricular:
   organisation: W.I.S.V. "Christiaan Huygens"
   description: "As part of the full-time board I was running the 2000-member big study association for Math & Computer Science with 6 other board members. Main responsibilities included:
 
-  * Overlooking 10+ committies averaging at 6 people in size organizing small lunches to 200 people Symposia and Event Weekends.
+  * Overlooking 10+ committees averaging at 6 people in size. Organizing small lunches to 200 people big Symposia and Event Weekends.
 
   * Helping students who are nearing the end of their master making career choices through workshops, lectures and other events.
   "

@@ -8,11 +8,11 @@
         </div>
 
         <p>
-          <span class="txt-full-white">{{ person.about }}</span>
+          <span class="txt-full-white">{{ person.title }}</span>
         </p>
       </div>
 
-      <div class="multi-line-txt">{{ person.knowledge }}</div>
+      <div class="multi-line-txt">{{ person.about }}</div>
 
       <a :href="contactLinks.email">
         <div class="block-marged txt-full-white">{{ person.contact.email }}</div>
