@@ -9,23 +9,27 @@ about: Technical, Curious, Dutch.
 experience:
 - company: Legal OS
   location: Berlin, Germany
-  position: Lead Developer
+  position: Technical Product Manager
+  timeperiod: September 2018 - August 2019
+  description: "Worked with legal minds & product team to develop a 'Legal Library' product from scratch. Got to MVP by rapid prototyping. Prioritized features by working closely together with Head of Product. Built Roadmap by create Feature Effort/Reward plots.
+
+
+Also had role as Product Owner for main development work stream. Ran Sprint Planning & Backlog Grooming, including setting Sprint Goals. Applied agile methodology."
+  website: https://legalos.io
+
+- company: Legal OS
+  location: Berlin, Germany
+  position: Lead Software Engineer
   timeperiod: November 2017 - August 2019
-  description: "Brought tech at Legal OS from zero code until a full Product. Legal OS closed a €2 million seed round.
+  description: "As the first developer at https://www.legalos.io I was responsible for building out the product from the tech side. Joined the journey from zero code to a €2 million seed round.
 
-  * Managed Library Product; Feature Effort/Reward Plot, Roadmap. Brought from initial concept to released MVP.
+Key responsibilities:
 
-  * Tracking Quality of user journeys of Management Product.
+* Making strategic decisions about Tech Stack & Tech Architecture
 
-  * Product Owner for the Management Product.
+* Setting up and executing on Tech Hiring process
 
-  * Managed one remote developer.
-
-  * Responsible for performing technical interviews and sourcing candidates.
-
-  * Engineering data structures to capture contractual legal meaning as data.
-
-  * Set up full CI/CD and Deployment workflows
+* Setting up Continuous Integration DevOps
   "
   website: https://legalos.io
 
