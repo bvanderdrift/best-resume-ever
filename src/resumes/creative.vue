@@ -135,28 +135,6 @@
         </div>
       </div>
 
-      <div v-if="person.extracurricular" class="projects-section section">
-        <div class="icon">
-          <i class="material-icons">add</i>
-          <span class="section-headline">{{ lang.extracurricular }}</span>
-        </div>
-
-        <div class="section-content">
-          <a
-            v-for="(extracurricular, index) in person.extracurricular"
-            :key="index"
-            class="section-content__item"
-            :href="extracurricular.url"
-          >
-            <span class="section-content__header">{{ extracurricular.name }}</span>
-            <span class="section-content__subheader">{{ extracurricular.organisation }}</span>
-            <span class="section-content__text">
-              <vue-markdown>{{ extracurricular.description }}</vue-markdown>
-            </span>
-          </a>
-        </div>
-      </div>
-
       <div v-if="person.contributions" class="contributions-section section">
         <div class="icon">
           <i class="fa fa-heart font-awesome-icons"></i>
