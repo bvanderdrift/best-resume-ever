@@ -1,24 +1,23 @@
 <template>
   <div class="resume" id="resume2">
     <div class="left-column">
-      <div>
-        <div class="headline">
-          <span>{{ person.name.first }} {{ person.name.middle }}</span>
-          <span class="uppercase">{{ person.name.last }}</span>
-        </div>
-
-        <p>
-          <span class="txt-full-white">{{ person.title }}</span>
-        </p>
+      <div class="headline">
+        <span>{{ person.name.first }} {{ person.name.middle }}</span>
+        <span class="uppercase">{{ person.name.last }}</span> -
+        <span class="about-txt">{{ person.about }}</span>
+      </div>
+      <div class="headline-title">
+        <span>{{ person.title }}</span>
       </div>
 
-      <div class="multi-line-txt">{{ person.about }}</div>
-
-      <a :href="contactLinks.email">
+      <a :href="contactLinks.email" v-if="contactLinks.email">
         <div class="block-marged txt-full-white">{{ person.contact.email }}</div>
       </a>
 
-      <div class="block-marged txt-full-white">{{ person.contact.phone }}</div>
+      <div
+        v-if="person.contact.phone"
+        class="block-marged txt-full-white"
+      >{{ person.contact.phone }}</div>
 
       <div class="social-container">
         <a v-if="person.contact.website" :href="person.contact.website" class="external-link">
@@ -62,32 +61,6 @@
           <span class="block-marged txt-full-white">{{ person.contact.goodreads }}</span>
         </a>
       </div>
-
-      <div v-if="person.skills" class="skills-section section">
-        <div class="icon">
-          <i class="material-icons">done_all</i>
-          <span class="section-headline">{{ lang.skills }}</span>
-        </div>
-
-        <div class="section-content-grid">
-          <a
-            v-for="(skill, index) in person.skills"
-            :key="index"
-            class="grid-item"
-            :href="skill.url"
-          >
-            <i v-if="skill.iconClass" :class="'lang-icon ' + skill.iconClass"></i>
-
-            <span v-else class="squarred-grid-item">
-              <span class="skill-name">{{ skill.name }}</span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="left-column-bg">
-      <!-- <div><a href="/otot">toto</a></div> -->
     </div>
 
     <div class="right-column">
@@ -110,6 +83,27 @@
             <span class="section-content__text">
               <vue-markdown>{{ experience.description }}</vue-markdown>
             </span>
+          </a>
+        </div>
+      </div>
+
+      <div v-if="person.projects" class="projects-section section">
+        <div class="icon">
+          <i class="material-icons">code</i>
+          <span class="section-headline">{{ lang.projects }}</span>
+        </div>
+
+        <div class="section-content">
+          <a
+            v-for="(project, index) in person.projects"
+            :key="index"
+            class="section-content__item"
+            :href="project.url"
+          >
+            <span class="section-content__header">{{ project.name }}</span>
+            <span class="section-content__subheader">{{ project.platform }}</span>
+            <span class="section-content__text">{{ project.description }}</span>
+            <span class="section-content__text--light">{{ project.url }}</span>
           </a>
         </div>
       </div>
@@ -178,6 +172,7 @@ export default Vue.component(name, getVueOptions(name));
 
 .resume {
   display: flex;
+  flex-direction: column;
   position: relative;
 
   font-family: "Roboto" !important;
@@ -185,44 +180,16 @@ export default Vue.component(name, getVueOptions(name));
 }
 
 .left-column {
-  width: 30%;
+  flex: 25;
   height: 100%;
   padding: 30px;
-  padding-top: 45px;
+  padding-top: 15px;
   text-align: left;
 
   color: #ffffff;
   color: rgba(255, 255, 255, 0.59);
   background-color: @accent-color;
   overflow: hidden;
-  display: block;
-  z-index: 2;
-
-  opacity: 1; // lower this value (0.7 approx.) to see the cover image
-  position: absolute;
-}
-
-// Background cover displayed on the left-column side
-// ------------
-.left-column-bg {
-  // You can put your own cover image in the url path
-  // --------------------------------------
-  // background: url('../assets/cover.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 25% 25%;
-  opacity: 0.4; // up this value to contrast the cover image
-
-  height: 100%;
-  width: 35%;
-  padding: 30px;
-  padding-top: 45px;
-
-  display: block;
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  z-index: 1;
 }
 
 .right-column {
@@ -231,7 +198,7 @@ export default Vue.component(name, getVueOptions(name));
   padding: 30px;
 
   height: 100%;
-  width: 65%;
+  flex: 75;
 }
 
 a {
@@ -294,9 +261,8 @@ a {
   margin-bottom: 15px;
 }
 
-.multi-line-txt {
-  margin-top: 30px;
-  margin-bottom: 20px;
+.about-txt {
+  color: rgba(255, 255, 255, 0.59);
 }
 
 .social-container {
@@ -308,6 +274,10 @@ a {
   color: white;
   font-size: 1.3em;
   font-weight: bold;
+}
+
+.headline-title {
+  color: white;
 }
 
 .txt-full-white {
