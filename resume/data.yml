@@ -3,7 +3,7 @@ name:
   first: Beer
   middle: van der
   last: Drift
-title: Product Person.
+title: Product Person
 about: Technical, Curious, Dutch.
 
 experience:
@@ -11,60 +11,65 @@ experience:
   location: Berlin, Germany
   position: Technical Product Manager
   timeperiod: September 2018 - August 2019
-  description: "Worked with legal minds & product team to develop a 'Legal Library' product from scratch. Got to MVP by rapid prototyping. Prioritized features by working closely together with Head of Product. Built Roadmap by create Feature Effort/Reward plots.
+  description: "
+  * Shipped MVP of Legal Library Product on which Legal OS raised €2 million seed round.
 
+  * Created and communicated Roadmap for Legal Library Product which laid out path for shipped MVP.
 
-Also had role as Product Owner for main development work stream. Ran Sprint Planning & Backlog Grooming, including setting Sprint Goals. Applied agile methodology."
+  * Performed interviews with Legal Experts to understand root problem of inefficient legal work.
+
+  * Lead Sprint Planning, Backlog Grooming and Retrospectives. Developers and founders were unanimously satisfied with process in end-of-year reflection.
+  "
   website: https://legalos.io
 
 - company: Legal OS
   location: Berlin, Germany
   position: Lead Software Engineer
   timeperiod: November 2017 - August 2019
-  description: "As the first developer at https://www.legalos.io I was responsible for building out the product from the tech side. Joined the journey from zero code to a €2 million seed round.
+  description: "
+  * Developed and shipped User Facing Product that had zero downtime during my time at Legal OS.
 
-Key responsibilities:
+  * Set up infrastructure including database migrations for shipping product. Bi-weekly releases at the start with continuous deployment at the end. No release had to be rolled back.
 
-* Making strategic decisions about Tech Stack & Tech Architecture
-
-* Setting up and executing on Tech Hiring process
-
-* Setting up Continuous Integration DevOps
+  * Lead team of two fulltime developers and one on-call freelancer to develop product that generated Legal OS's first revenue.
   "
   website: https://legalos.io
 
 - company: Methylium & Innovattic (Two Parttime Jobs)
   location: Delft, The Netherlands
-  position: Software Developer
+  position: Software Engineer
   timeperiod: February 2014 - August 2016
-  description: "Methylium: Created Frontend for Windows phone apps using C#. Innovattic: Developed Mobile Games in Unity3D using C# and Android Apps using Java."
+  description: "
+  * Methylium: Created Frontend for Windows phone apps using C#.
+
+  * Innovattic: Developed Mobile Games in Unity3D using C# and Android Apps using Java."
   website: https://www.innovattic.com/
 
 education:
-- degree: Master of Computer Science (incomplete)
+- degree: Master of Computer Science at TU Delft & TU Berlin (incomplete)
   timeperiod: September 2015 - February 2018
-  description: Major in Cyber Security (3TU Program), Delft University of Technology, The Netherlands. TU Berlin as part of an Erasmus exchange from September 2017 - February 2018. Halted to become part of Legal OS.
+  description: Major in Cyber Security (3TU Program). Halted to become part of Legal OS.
   website: https://www.4tu.nl/cybsec/en/
 
-- degree: Bachelor of Computer Science
+- degree: Bachelor of Computer Science at TU Delft
   timeperiod: March 2012 - August 2015
-  description: Major in Computer Science, Minor in Law, Economics & Computer Science. Delft Univerisity of Technology, The Netherlands. GPA 7.4/10.
+  description: Major in Computer Science. Minor in Law, Economics & Philosophy.
   website: https://www.tudelft.nl/en/
 
 # skill level goes 0 to 100
 skills:
-- name: Prototyping
+- name: Productboard
+  level: 50
+- name: JIRA
   level: 80
-- name: Agile
-  level: 60
-- name: Figma
-  level: 75
+- name: Sketch/Figma
+  level: 70
 - name: Balsamiq
   level: 60
 - name: Coding
-  level: 95
+  level: 90
 - name: Product Ownership
-  level: 60
+  level: 70
 knowledge: Fluent in English & Dutch, B2 in German, A2 in French.
 
 volunteering:
@@ -74,13 +79,13 @@ volunteering:
   website: https://www.redi-school.org/berlin
 
 projects:
-- name: Mixmerger
-  platform: Java, Javascript
-  description: 🎶 Instead of automatically mixing songs, why not merge mixes at overlapping songs and let the DJ's do the heavy work? Using FFT libraries and the Shazam algorithm to find matches between mixes and slowly transition between them to create infinite mixes.
 - name: Transcendance
   platform: Unity3D, C#, Oculus Rift
-  description: 🎮 Without owning an Oculus Rift I created a musical VR experience which was featured on the live stream of one of the bigger VR enthousiasts back when Oculus was still small.
+  description: 🎮 Created a musical VR experience without owning a VR headset which was featured on the live stream of one of the bigger VR enthousiasts in 2013.
   url: https://github.com/bvanderdrift/transcendance-prototype
+- name: Mixmerger (unreleased)
+  platform: Java, Javascript
+  description: 🎶 Product to find and make use of intersections between music mixes and therefore creating an infinite mix. Dove deep into Fourier Transform and Shazam Algorithm.
 
 hobbies:
 - name: Biking
