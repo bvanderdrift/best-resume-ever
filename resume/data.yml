@@ -14,11 +14,11 @@ experience:
   description: "
   * Developed and shipped User Facing Product from ground up that had zero downtime during my time at Legal OS.
 
+  * Engineered Data Models which embodied vision on which Legal OS raised €2 million seed round.
+
   * Set up infrastructure including database migrations for shipping product. Bi-weekly releases at the start with continuous deployment at the end. No release had to be rolled back.
 
   * Lead team of two fulltime developers and one on-call freelancer to develop product that generated Legal OS's first revenue.
-
-  * Built & shipped MVP of Legal Library Product on which Legal OS raised €2 million seed round.
 
   * **Tech**: React.js, Node.js, Meteor.js, MongoDB, TypeScript, CircleCI, Docker
   "
@@ -65,6 +65,8 @@ skills:
   level: 40
 - name: Docker
   level: 40
+- name: MongoDB
+  level: 85
 knowledge: Fluent in English & Dutch, B2 in German, A2 in French.
 
 volunteering:
