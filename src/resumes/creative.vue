@@ -142,7 +142,6 @@ export default Vue.component(name, getVueOptions(name));
 }
 
 .personal_info_section {
-  flex: 1;
   padding: 15px 30px;
   text-align: left;
 
@@ -159,8 +158,6 @@ export default Vue.component(name, getVueOptions(name));
   display: flex;
   flex-direction: column;
   padding: 30px;
-
-  flex: 0;
 }
 
 a {
