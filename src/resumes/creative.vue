@@ -1,23 +1,14 @@
 <template>
   <div class="resume" id="resume2">
-    <div class="left-column">
+    <div class="personal_info_section">
       <div class="headline">
         <span>{{ person.name.first }} {{ person.name.middle }}</span>
         <span class="uppercase">{{ person.name.last }}</span> -
         <span class="about-txt">{{ person.about }}</span>
+        <div class="headline-title">
+          <span>{{ person.title }}</span>
+        </div>
       </div>
-      <div class="headline-title">
-        <span>{{ person.title }}</span>
-      </div>
-
-      <a :href="contactLinks.email" v-if="contactLinks.email">
-        <div class="block-marged txt-full-white">{{ person.contact.email }}</div>
-      </a>
-
-      <div
-        v-if="person.contact.phone"
-        class="block-marged txt-full-white"
-      >{{ person.contact.phone }}</div>
 
       <div class="social-container">
         <a v-if="person.contact.website" :href="person.contact.website" class="external-link">
@@ -31,39 +22,10 @@
           <i class="fa fa-linkedin contact-icon"></i>
           <span class="block-marged txt-full-white">{{ person.contact.linkedin }}</span>
         </a>
-
-        <a v-if="person.contact.github" :href="contactLinks.github" class="external-link">
-          <i class="fa fa-github contact-icon"></i>
-          <span class="block-marged txt-full-white">{{ person.contact.github }}</span>
-        </a>
-
-        <a v-if="person.contact.codefights" :href="contactLinks.codefights" class="external-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" class="contact-icon-svg">
-            <path
-              d="M12 15.2L9.2 4.8 0 3.2l1.7 2.6 5.7.7.7 2.3-3.7-.4 1.3 2 3 .3L12 20.8l3.3-10.1 3-.3 1.3-2-3.7.4.7-2.3 5.7-.7L24 3.2l-9.2 1.6"
-            />
-          </svg>
-
-          <span class="block-marged txt-full-white">{{ person.contact.codefights }}</span>
-        </a>
-
-        <a v-if="person.contact.medium" :href="contactLinks.medium" class="external-link">
-          <i class="fab fa-medium contact-icon"></i>
-          <span class="block-marged txt-full-white">{{ person.contact.medium }}</span>
-        </a>
-
-        <a
-          v-if="person.contact.goodreads"
-          :href="'https://goodreads.com/' + person.contact.goodreads"
-          class="external-link"
-        >
-          <i class="fa fa-book contact-icon"></i>
-          <span class="block-marged txt-full-white">{{ person.contact.goodreads }}</span>
-        </a>
       </div>
     </div>
 
-    <div class="right-column">
+    <div class="professional_section">
       <div class="experience-section section">
         <div class="icon">
           <i class="material-icons small-icon">work</i>
@@ -179,26 +141,26 @@ export default Vue.component(name, getVueOptions(name));
   font-size: 0.9em;
 }
 
-.left-column {
-  flex: 25;
-  height: 100%;
-  padding: 30px;
-  padding-top: 15px;
+.personal_info_section {
+  flex: 1;
+  padding: 15px 30px;
   text-align: left;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   color: #ffffff;
   color: rgba(255, 255, 255, 0.59);
   background-color: @accent-color;
-  overflow: hidden;
 }
 
-.right-column {
+.professional_section {
   display: flex;
   flex-direction: column;
   padding: 30px;
 
-  height: 100%;
-  flex: 75;
+  flex: 0;
 }
 
 a {
@@ -265,11 +227,6 @@ a {
   color: rgba(255, 255, 255, 0.59);
 }
 
-.social-container {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .headline {
   color: white;
   font-size: 1.3em;
@@ -278,6 +235,8 @@ a {
 
 .headline-title {
   color: white;
+  font-size: 0.9em;
+  font-weight: normal;
 }
 
 .txt-full-white {
